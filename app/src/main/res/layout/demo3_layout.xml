@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textColor="@android:color/white"
+        android:text="图片的圆角显示，从实现方法上讲分为两种做法：\n
+在图片上做\n
+在控件上做\n
+从代码上讲，均使用 Android Graphics API：\n
+
+Xfermodes\n
+Regions\n
+Canvas.drawRoundRect\n
+Canvas.clipPath\n
+GradientDrawable.setCornerRadii\n\n
+1.在图片上做\n把图片裁剪成圆角图片\n优点：节约内存\n\n2.在控件上做\n控件绘制的时候，控制显示区域\n优点：方便省事，适合各种图片框架" />
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+</LinearLayout>
